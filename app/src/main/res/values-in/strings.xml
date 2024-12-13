@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="app_name">Story App</string>
+        <string name="nav_header_desc">Navigation header</string>
+
+        <string name="menu_home">Beranda</string>
+        <string name="menu_gallery">Galeri</string>
+        <string name="title_login_page">Hai, Sobat Dicoding!</string>
+        <string name="message_login_page">Sudah siap untuk melihat cerita coders lainnya, masukkan data kamu terlebih dahulu!</string>
+        <string name="email">Email</string>
+        <string name="password">Kata sandi</string>
+        <string name="login">Masuk</string>
+        <string name="title_register_page">Lengkapi data diri kamu</string>
+        <string name="nama">Nama</string>
+        <string name="daftar">Daftar</string>
+        <string name="gallery">Galeri</string>
+        <string name="camera">kamera</string>
+        <string name="description">Deskripsi</string>
+        <string name="welcome_title">Selamat datang di Story App</string>
+        <string name="message_weolcome_page">Mari melihat kisah-kisah inspiratif dari para alumni Dicoding lainnya</string>
+        <string name="upload">Unggah</string>
+        <string name="empty_image_warning">Silakan masukkan berkas gambar terlebih dahulu.</string>
+        <string name="logout">Keluar</string>
+        <string name="settings">Pengaturan Bahasa</string>
+        <string name="maps">Peta</string>
+        <string name="title_activity_maps">MapsActivity</string>
+        <string name="retry">Ulangi</string>
+        <string name="location_not_found">Lokasi tidak ditemukan</string>
+        <string name="location">Lokasi</string>
+
+</resources>
