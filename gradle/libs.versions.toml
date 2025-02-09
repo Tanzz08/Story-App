@@ -39,8 +39,12 @@ mockitoInline = "5.2.0"
 
 espressoIntents = "3.6.1"
 
+circleimageview = "3.1.0"
+
 
 [libraries]
+circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
+
 androidx-espresso-idling-resource = { module = "androidx.test.espresso:espresso-idling-resource", version.ref = "espressoCore" }
 espresso-intents = { module = "androidx.test.espresso:espresso-intents", version.ref = "espressoIntents" }
 

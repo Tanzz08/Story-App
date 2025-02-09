@@ -12,16 +12,19 @@ import com.bumptech.glide.Glide
 import com.example.storyapp.data.database.StoryEntity
 import com.example.storyapp.databinding.ItemStoriesBinding
 import com.example.storyapp.ui.detail.DetailActivity
+import com.example.storyapp.utils.formatDate
 
 class HomeAdapter : PagingDataAdapter<StoryEntity, HomeAdapter.MyViewHolder>(DIFF_CALLBACK) {
     class MyViewHolder (private val binding: ItemStoriesBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(data: StoryEntity){
+            val formatter = formatDate(data.createdAt)
             binding.cardTitle.text = data.name
             binding.textView.text = data.description
             Glide.with(itemView.context)
                 .load(data.photoUrl)
                 .fitCenter()
                 .into(binding.imgItemPhoto)
+            binding.tvCreatedAt.text = formatter
         }
     }
 

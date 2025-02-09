@@ -5,11 +5,13 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Matrix
+import android.icu.util.TimeZone
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
 import androidx.core.content.FileProvider
+import androidx.core.net.ParseException
 import androidx.exifinterface.media.ExifInterface
 import java.io.ByteArrayOutputStream
 import java.io.File
@@ -103,4 +105,17 @@ fun rotateImage(source: Bitmap, angle:Float): Bitmap {
     return Bitmap.createBitmap(
         source, 0, 0, source.width, source.height, matrix, true
     )
+}
+
+fun formatDate(dateString: String): String {
+    val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault())
+    inputFormat.timeZone = java.util.TimeZone.getTimeZone("UTC")
+    val outputFormat = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
+    try {
+        val date = inputFormat.parse(dateString)
+        return outputFormat.format(date)
+    } catch (e: ParseException) {
+        e.printStackTrace()
+        return "Invalid Date" // Atau tangani error sesuai kebutuhan
+    }
 }
